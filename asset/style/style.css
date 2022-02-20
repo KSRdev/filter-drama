@@ -1,0 +1,313 @@
+/*=============== GOOGLE FONTS ===============*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+
+:root {
+    --header-height: 3.5rem;
+    /*========== Colors ==========*/
+    --first-hue: 240;
+    --sat: 66%;
+    --lig: 75%;
+    --second-hue: 230;
+    --first-color: hsl(var(--first-hue), var(--sat), var(--lig));
+    --first-color-alt: hsl(var(--first-hue), var(--sat), 71%);
+    /* -4% */
+    --title-color: hsl(var(--second-hue), 15%, 95%);
+    --text-color: hsl(var(--second-hue), 8%, 75%);
+    --text-color-light: hsl(var(--second-hue), 4%, 55%);
+    --body-color: hsl(var(--second-hue), 48%, 8%);
+    --container-color: hsl(var(--second-hue), 32%, 12%);
+    /*========== Font and typography ==========*/
+    --body-font: 'Poppins', sans-serif;
+    --biggest-font-size: 1.75rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+    --tiny-font-size: .625rem;
+    /*========== Font weight ==========*/
+    --font-medium: 500;
+    --font-semibold: 600;
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    --z-modal: 1000;
+}
+
+
+/* Responsive typography */
+
+@media screen and (min-width: 968px) {
+     :root {
+        --biggest-font-size: 2.5rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+        --smaller-font-size: .813rem;
+    }
+}
+
+
+/*=============== BASE ===============*/
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#body {
+    opacity: 0;
+}
+
+#fade {
+    opacity: 0;
+    transition: 1.5s;
+}
+
+body,
+button,
+input,
+textarea {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+}
+
+#body {
+    opacity: 0;
+}
+
+#fade {
+    opacity: 0;
+    transition: 1.5s;
+}
+
+body {
+    background-color: var(--body-color);
+    color: var(--text-color);
+    transition: .4s;
+    /* for light mode animation */
+}
+
+h2,
+h3 {
+    color: var(--title-color);
+    font-weight: var(--font-semibold);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.drama__button {
+    width: max-content;
+    color: var(--first-color);
+    font-size: var(--small-font-size);
+    display: flex;
+    align-items: center;
+    column-gap: .25rem;
+}
+
+.drama__button:hover .drama__icon {
+    transform: translateX(.25rem);
+}
+
+.drama__icon {
+    font-size: 1rem;
+    transition: .4s;
+}
+
+.active-drama {
+    background-color: var(--first-color);
+    color: var(--body-color);
+}
+
+.hide_categories {
+    display: none;
+    transition: all ease-in-out;
+}
+
+.categories {
+    display: grid;
+    padding: 2rem;
+    transition: all ease-in-out;
+    grid-template-columns: repeat(4, max-content);
+}
+
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+
+.container {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.grid {
+    display: grid;
+    gap: 1.25rem;
+}
+
+.main {
+    overflow: hidden;
+}
+
+.section {
+    padding: 4.5rem 0 1rem;
+}
+
+.section__title,
+.section__subtitle {
+    text-align: center;
+}
+
+.section__title {
+    font-size: var(--h2-font-size);
+    color: var(--first-color);
+    margin-bottom: 2rem;
+}
+
+.section__subtitle {
+    display: block;
+    font-size: var(--smaller-font-size);
+    color: var(--text-color-light);
+}
+
+
+/*=============== WORK ===============*/
+
+.drama_container {
+    padding-top: 1rem;
+}
+
+.drama__filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: .75rem;
+    margin-bottom: 2rem;
+    flex-direction: column;
+}
+
+.drama__item {
+    cursor: pointer;
+    color: var(--title-color);
+    padding: .25rem .75rem;
+    font-weight: var(--font-medium);
+    border-radius: .5rem;
+}
+
+.drama__card {
+    background-color: var(--container-color);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.drama__img {
+    border-radius: 1rem;
+    margin-bottom: .75rem;
+}
+
+.drama__title {
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+    margin-bottom: .25rem;
+}
+
+
+/*=============== BREAKPOINTS ===============*/
+
+
+/* For small devices */
+
+@media screen and (max-width: 320px) {
+    .drama__item {
+        font-size: var(--small-font-size);
+    }
+    .drama__filters {
+        column-gap: .25rem;
+    }
+    .categories {
+        display: grid;
+        padding: 2rem;
+        transition: all ease-in-out;
+        grid-template-columns: repeat(3, max-content);
+    }
+}
+
+
+/* For medium devices */
+
+@media screen and (min-width: 576px) {
+    .drama__container {
+        justify-content: center;
+    }
+    .drama__img {
+        width: 300px;
+    }
+}
+
+@media screen and (min-width: 767px) {
+    .drama__container {
+        grid-template-columns: repeat(2, max-content);
+    }
+}
+
+
+/* For large devices */
+
+@media screen and (min-width: 992px) {
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .section {
+        padding: 6.5rem 0 1rem;
+    }
+    .section_title {
+        margin-bottom: 3.5rem;
+    }
+    .categories {
+        display: grid;
+        padding: 2rem;
+        transition: all ease-in-out;
+        grid-template-columns: repeat(8, max-content);
+    }
+    .drama__container {
+        gap: 3rem;
+        grid-template-columns: repeat(3, max-content);
+    }
+    .drama__card {
+        padding: 1.25rem;
+    }
+    .drama__img {
+        margin-bottom: 1rem;
+    }
+    .drama__title {
+        margin-bottom: .5rem;
+    }
+}
