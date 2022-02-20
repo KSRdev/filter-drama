@@ -7,11 +7,11 @@ const selectedTheme = localStorage.getItem('selected-theme')
 const selectedIcon = localStorage.getItem('selected-icon')
 
 const getCurrentTheme = () => categories.classList.contains(openCategories) ? 'open' : 'close'
-const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'uil-angle-right-b' : 'uil-arrow-down'
+const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'uil-arrow-right' : 'uil-arrow-down'
 
 if (selectedIcon) {
     categories.classList[selectedTheme === 'open' ? 'add' : 'remove'](openCategories)
-    themeButton.classList[selectedIcon === 'uil-angle-right-b' ? 'add' : 'remove'](iconTheme)
+    themeButton.classList[selectedIcon === 'uil-arrow-right' ? 'add' : 'remove'](iconTheme)
 }
 
 themeButton.addEventListener('click', () => {
