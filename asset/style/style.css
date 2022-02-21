@@ -283,6 +283,10 @@ select {
     margin-bottom: .75rem;
 }
 
+.drama__img {
+    width: 230px;
+}
+
 .drama-title-item {
     font-size: var(--normal-font-size);
     font-weight: var(--font-medium);
