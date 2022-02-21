@@ -55,7 +55,7 @@ function search_drama() {
 
     for (i = 0; i < dramaCard.length; i++) {
 
-        if (!dramaCard[i].innerHTML.toLowerCase().includes(input)) {
+        if (!dramaCard[i].textContent.toLowerCase().includes(input)) {
             dramaCard[i].style.display = "none";
         } else {
             dramaCard[i].style.display = "block";
