@@ -211,8 +211,12 @@ img {
     border-radius: .5rem;
 }
 
-::placeholder {
+input[type=text],
+select {
     padding-left: 1rem;
+}
+
+::placeholder {
     opacity: .8;
     color: var(--text-color);
 }
