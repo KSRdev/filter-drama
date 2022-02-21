@@ -17,40 +17,46 @@
         <!--=============== FILTER ===============-->
         <section class="drama section" id="work">
             <h2 class="section__title">Filter</h2>
-            <span class="section__subtitle"></span>
+
             <div class="drama__filters">
                 <span class="drama__item active-drama" data-filter='all'>All &emsp;<i class="uil uil-arrow-right" id="categories-button"></i></span>
+                <input type="text" onkeyup="search_drama()" placeholder="search" id="search" class="section__search"></input>
                 <div class="hide_categories" id="h_categories">
                     <span class="drama__item" data-filter='.action'>Action</span>
                     <span class="drama__item" data-filter='.romance'>Romance</span>
                     <span class="drama__item" data-filter='.fantasy'>Fantasy</span>
                     <span class="drama__item" data-filter='.comedy'>Comedy</span>
-                    <span class="drama__item" data-filter='.nature'>School</span>
+                    <span class="drama__item" data-filter='.school'>School</span>
                     <span class="drama__item" data-filter='.sports'>Sports</span>
                     <span class="drama__item" data-filter='.modern'>Modern</span>
                     <span class="drama__item" data-filter='.chinese'>Chinese</span>
+                    <span class="drama__item" data-filter='.korean'>Korean</span>
+                    <span class="drama__item" data-filter='.japanese'>Japanese</span>
+                    <span class="drama__item" data-filter='.historical'>Historical</span>
+                    <span class="drama__item" data-filter='.friendship'>Friendship</span>
                 </div>
+
             </div>
             <div class="drama__container container grid">
-                <div class="drama__card mix romance comedy modern school chinese ">
+                <div class="drama__card mix romance comedy modern school chinese friendship ">
                     <img src="./asset/img/meeting-you.png" alt="" class="drama__img">
-                    <h3 class="drama__title">Nature</h3>
+                    <h3 class="drama-title-item">Meeting You</h3>
                     <a href="#" class="drama__button">
-                        Demo <i class='uil uil-angle-right-b drama__icon'></i> 
+                        More details <i class='uil uil-angle-right-b drama__icon'></i> 
                     </a>
                 </div>
-                <div class="drama__card mix romance comedy modern school chinese ">
+                <div class="drama__card mix romance comedy modern school chinese friendship ">
                     <img src="./asset/img/put-your-head-on-my-shoulder.png" alt="" class="drama__img">
-                    <h3 class="drama__title">Nature</h3>
+                    <h3 class="drama-title-item">Put Your Head On My Shoulder</h3>
                     <a href="#" class="drama__button">
-                        Demo <i class='uil uil-angle-right-b drama__icon'></i> 
+                        More details <i class='uil uil-angle-right-b drama__icon'></i> 
                     </a>
                 </div>
-                <div class="drama__card mix romance fantasy modern action ">
+                <div class="drama__card mix romance fantasy modern action korean ">
                     <img src="./asset/img/the-king-the-eternal-monarch.png" alt="" class="drama__img">
-                    <h3 class="drama__title">Nature</h3>
+                    <h3 class="drama-title-item">The King: the Eternal Monarch</h3>
                     <a href="#" class="drama__button">
-                        Demo <i class='uil uil-angle-right-b drama__icon'></i> 
+                        More details <i class='uil uil-angle-right-b drama__icon'></i> 
                     </a>
                 </div>
             </div>

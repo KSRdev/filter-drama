@@ -31,11 +31,11 @@ let mixerPortfolio = mixitup('.drama__container', {
     }
 });
 
-const linkWork = document.querySelectorAll('.drama__categories')
+const linkWork = document.querySelectorAll('.drama__item')
 
 function activeWork() {
-    linkWork.forEach(L => L.classList.remove('active-categories'))
-    this.classList.add('active-categories')
+    linkWork.forEach(L => L.classList.remove('active-drama'))
+    this.classList.add('active-drama')
 }
 linkWork.forEach(L => L.addEventListener('click', activeWork))
 
@@ -44,4 +44,19 @@ window.onload = function() {
         document.getElementById('body').style.opacity = "100";
         document.getElementById('fade').style.opacity = "100";
     }, 100);
+}
+
+
+function search_drama() {
+    let input = document.getElementById('search').value
+    input = input.toLowerCase();
+    let dramaCard = document.getElementsByClassName('drama__card');
+
+    for (i = 0; i < dramaCard.length; i++) {
+        if (!dramaCard[i].innerHTML.toLowerCase().includes(input)) {
+            dramaCard[i].style.display = "none";
+        } else {
+            dramaCard[i].style.display = "";
+        }
+    }
 }
