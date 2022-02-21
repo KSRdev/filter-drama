@@ -244,6 +244,7 @@ select {
     font-weight: var(--font-medium);
     border-radius: .5rem;
     margin-bottom: 1rem;
+    text-align: center;
 }
 
 .drama__card {
