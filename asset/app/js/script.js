@@ -52,11 +52,14 @@ function search_drama() {
     input = input.toLowerCase();
     let dramaCard = document.getElementsByClassName('drama__card');
 
+
     for (i = 0; i < dramaCard.length; i++) {
+
         if (!dramaCard[i].innerHTML.toLowerCase().includes(input)) {
             dramaCard[i].style.display = "none";
         } else {
-            dramaCard[i].style.display = "";
+            dramaCard[i].style.display = "block";
+
         }
     }
 }

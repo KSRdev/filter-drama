@@ -137,6 +137,9 @@ img {
     column-gap: .25rem;
 }
 
+
+/*==================== BUTTONS ====================*/
+
 .drama__button:hover .drama__icon {
     transform: translateX(.25rem);
 }
@@ -224,8 +227,11 @@ select {
 
 /*=============== WORK ===============*/
 
-.drama_container {
+.drama__container {
     padding-top: 1rem;
+    gap: 3rem;
+    grid-template-columns: repeat(1, max-content);
+    justify-content: center;
 }
 
 .drama__filters {
@@ -245,6 +251,12 @@ select {
     border-radius: .5rem;
     margin-bottom: 2rem;
     text-align: center;
+}
+
+.drama__card {
+    background-color: var(--container-color);
+    padding: 1rem;
+    border-radius: 1rem;
 }
 
 .drama__card {
@@ -282,6 +294,11 @@ select {
         padding: 2rem;
         transition: all ease-in-out;
         grid-template-columns: repeat(3, max-content);
+    }
+    .drama__container {
+        gap: 3rem;
+        grid-template-columns: repeat(1, max-content);
+        justify-content: center;
     }
 }
 
