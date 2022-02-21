@@ -166,6 +166,10 @@ img {
     grid-template-columns: repeat(4, max-content);
 }
 
+#categories-button {
+    z-index: 9;
+}
+
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 
@@ -247,6 +251,15 @@ select {
     cursor: pointer;
     color: var(--title-color);
     padding: .25rem .75rem;
+    font-weight: var(--font-medium);
+    border-radius: .5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.drama__items {
+    cursor: pointer;
+    color: var(--title-color);
     font-weight: var(--font-medium);
     border-radius: .5rem;
     margin-bottom: 2rem;

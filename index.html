@@ -19,7 +19,9 @@
             <h2 class="section__title">Filter</h2>
 
             <div class="drama__filters">
-                <span class="drama__item active-drama" data-filter='all'>All &emsp;<i class="uil uil-arrow-right" id="categories-button"></i></span>
+                <div class="all drama__item active-drama">
+                    <span class="drama__item " data-filter='all'>All </span><i class="uil uil-arrow-right" id="categories-button"></i>
+                </div>
                 <input type="text" onkeyup="search_drama()" placeholder="search" id="search" class="section__search"></input>
                 <div class="hide_categories" id="h_categories">
                     <span class="drama__item" data-filter='.action'>Action</span>
